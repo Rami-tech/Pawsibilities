@@ -1,5 +1,7 @@
 package com.example.dogshelter;
 
+import android.content.Context;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -11,6 +13,8 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 public class MainActivity extends AppCompatActivity {
+
+    MediaPlayer mediaPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +29,14 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(navView, navController);
+
+        playSound();
+        
+    }
+
+    public void playSound(Integer fileId){
+        mediaPlayer = MediaPlayer.create(this, fileId);
+        mediaPlayer.start();
     }
 
 }
