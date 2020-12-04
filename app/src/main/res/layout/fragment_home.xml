@@ -20,7 +20,7 @@
     <androidx.cardview.widget.CardView
         android:foreground="?android:attr/selectableItemBackground"
         android:clickable="true"
-        android:id="@+id/bankcardId"
+        android:id="@+id/volunteerID"
         android:layout_width="160dp"
         android:layout_height="190dp"
         android:layout_margin="10dp">
@@ -32,7 +32,7 @@
 
             <ImageView
 
-                android:id="@+id/volunteerImg"
+                android:id="@+id/adoptImg"
 
                 android:layout_width="91dp"
 
@@ -57,8 +57,8 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp" />
-            <!--                    android:background="@color/lightgray"-->
-            <!--                    android:layout_margin="10dp"/>-->
+                android:background="@color/lightgray"
+                android:layout_margin="10dp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -72,7 +72,7 @@
     <androidx.cardview.widget.CardView
         android:foreground="?android:attr/selectableItemBackground"
         android:clickable="true"
-        android:id="@+id/bankcardId"
+        android:id="@+id/donateID"
         android:layout_width="160dp"
         android:layout_height="190dp"
         android:layout_margin="10dp">
@@ -84,7 +84,9 @@
 
             <ImageView
 
-                android:id="@+id/volunteerImg"
+                android:id="@+id/donateImg"
+
+                android:background="@drawable/cirlce_gold"
 
                 android:layout_width="91dp"
 
@@ -96,7 +98,9 @@
 
                 android:scaleType="fitXY"
 
-                android:src="@drawable/ic_volunteer"
+                android:src="@drawable/ic_baseline_attach_money_24"
+
+
 
                 android:visibility="visible" />
 
@@ -104,7 +108,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="Volunteer"
+                android:text="Donate"
                 android:textStyle="bold" />
             <View
                 android:layout_width="match_parent"
@@ -116,8 +120,8 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="Help us make a difference"
-                android:textColor="@android:color/darker_gray" />
+                android:text="Giving is the greatest act of grace"
+                android:textColor="@android:color/darker_gray"/>
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
@@ -145,7 +149,7 @@
 
                 <ImageView
 
-                    android:id="@+id/volunteerImg"
+                    android:id="@+id/dogImg"
 
                     android:layout_width="91dp"
 
@@ -157,7 +161,7 @@
 
                     android:scaleType="fitXY"
 
-                    android:src="@drawable/ic_volunteer"
+                    android:src="@drawable/ic_dog"
 
                     android:visibility="visible" />
 
@@ -165,19 +169,20 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:text="Volunteer"
+                    android:text="Report"
                     android:textStyle="bold" />
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp" />
-                <!--                    android:background="@color/lightgray"-->
-                <!--                    android:layout_margin="10dp"/>-->
+                    android:background="@color/lightgray"
+                    android:layout_margin="10dp"/>
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:padding="5dp"
-                    android:text="Help us make a difference"
+                    android:text="Report stray dogs!"
                     android:textColor="@android:color/darker_gray" />
 
             </LinearLayout>
@@ -197,7 +202,7 @@
 
                 <ImageView
 
-                    android:id="@+id/volunteerImg"
+                    android:id="@+id/adoptImg"
 
                     android:layout_width="91dp"
 
@@ -209,7 +214,7 @@
 
                     android:scaleType="fitXY"
 
-                    android:src="@drawable/ic_volunteer"
+                    android:src="@drawable/dog_adoption"
 
                     android:visibility="visible" />
 
@@ -217,7 +222,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:text="Volunteer"
+                    android:text="Adopt"
                     android:textStyle="bold" />
                 <View
                     android:layout_width="match_parent"
