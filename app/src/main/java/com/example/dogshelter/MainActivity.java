@@ -31,12 +31,11 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupWithNavController(navView, navController);
 
         playSound(R.raw.bark);
-        
+
     }
 
     public void playSound(Integer fileId){
         mediaPlayer = MediaPlayer.create(this, fileId);
         mediaPlayer.start();
     }
-
 }
