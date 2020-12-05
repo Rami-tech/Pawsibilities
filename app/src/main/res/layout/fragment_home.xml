@@ -32,7 +32,7 @@
 
             <ImageView
 
-                android:id="@+id/adoptImg"
+                android:id="@+id/volunteerImg"
 
                 android:layout_width="91dp"
 
@@ -69,6 +69,7 @@
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
+
     <androidx.cardview.widget.CardView
         android:foreground="?android:attr/selectableItemBackground"
         android:clickable="true"
@@ -137,7 +138,7 @@
         <androidx.cardview.widget.CardView
             android:foreground="?android:attr/selectableItemBackground"
             android:clickable="true"
-            android:id="@+id/bankcardId"
+            android:id="@+id/reportId"
             android:layout_width="160dp"
             android:layout_height="190dp"
             android:layout_margin="10dp">
@@ -190,7 +191,7 @@
         <androidx.cardview.widget.CardView
             android:foreground="?android:attr/selectableItemBackground"
             android:clickable="true"
-            android:id="@+id/bankcardId"
+            android:id="@+id/adoptCardId"
             android:layout_width="160dp"
             android:layout_height="190dp"
             android:layout_margin="10dp">
