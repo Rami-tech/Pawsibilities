@@ -16,11 +16,13 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
+
 public class MainActivity extends AppCompatActivity {
 
     private HomeFragment homeFragment;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         BottomNavigationView navView = findViewById(R.id.nav_view);
@@ -36,11 +38,13 @@ public class MainActivity extends AppCompatActivity {
         homeFragment = new HomeFragment();
 
         playSound(R.raw.bark);
+
     }
+
+
 
     public void playSound(Integer fileId){
-        MediaPlayer mediaPlayer = MediaPlayer.create(this, fileId);
+        mediaPlayer = MediaPlayer.create(this, fileId);
         mediaPlayer.start();
     }
-
 }
