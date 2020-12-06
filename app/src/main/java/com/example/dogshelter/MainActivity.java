@@ -19,6 +19,8 @@ import androidx.navigation.ui.NavigationUI;
 
 public class MainActivity extends AppCompatActivity {
 
+    MediaPlayer mediaPlayer;
+
     private HomeFragment homeFragment;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
