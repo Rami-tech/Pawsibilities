@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     MediaPlayer mediaPlayer;
 
     private HomeFragment homeFragment;
+    private MediaPlayer mediaPlayer;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
