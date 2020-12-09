@@ -16,8 +16,12 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.example.dogshelter.AdoptActivity;
+import com.example.dogshelter.DonateActivity;
 import com.example.dogshelter.MainActivity;
 import com.example.dogshelter.R;
+import com.example.dogshelter.ReportActivity;
+import com.example.dogshelter.VolunteerActivity;
 import com.example.dogshelter.storyActivity;
 
 import java.util.Arrays;
@@ -71,20 +75,17 @@ public class HomeFragment extends Fragment {
         Class className = null;
 
         if(e==volunteerID)
-            Toast.makeText(getContext() , "Volunteer", Toast.LENGTH_SHORT).show();
+            className = VolunteerActivity.class;
         else{
             if(e==donateID)
-                Toast.makeText(getContext() , "Donate", Toast.LENGTH_SHORT).show();
+                className = DonateActivity.class;
             else{
                 if(e==adoptID)
-                    Toast.makeText(getContext() , "Adopt", Toast.LENGTH_SHORT).show();
-                else {
-                    Toast.makeText(getContext(), "Report", Toast.LENGTH_SHORT).show();
-                    className = storyActivity.class;
-                }
+                    className = AdoptActivity.class;
+                else
+                    className = ReportActivity.class;
             }
         }
-//        Toast.makeText(getContext(), className.toString(), Toast.LENGTH_SHORT).show();
         if(className!=null) {
             Intent intent = new Intent(getActivity(), className);
             startActivity(intent);
