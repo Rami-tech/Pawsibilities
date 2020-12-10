@@ -76,13 +76,8 @@ public class VolunteerFragment extends Fragment {
         });
         submitBtn.setOnClickListener(e ->{
             AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-            builder.setTitle("Information check");
+            builder.setTitle("One more thing...");
 
-//            final TextView textView = new TextView(getActivity());
-//            textView.setText("By submitting a team member will contact you!");
-//            LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
-//            textView.setLayoutParams(lp);
-//            builder.setView(textView);
             builder.setMessage("Name: "+name.getText()+"\n\n"+
                                 "Phone: "+phoneNumber.getText()+"\n\n"+
                                 "Center Location: "+spinner.getSelectedItem().toString()+"\n\n"+
