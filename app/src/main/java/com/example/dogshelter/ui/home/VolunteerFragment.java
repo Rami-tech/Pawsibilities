@@ -1,10 +1,8 @@
 package com.example.dogshelter.ui.home;
 
-import androidx.cardview.widget.CardView;
 import androidx.lifecycle.ViewModelProvider;
 
 import android.app.AlertDialog;
-import android.app.Dialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 
@@ -19,8 +17,6 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -61,7 +57,7 @@ public class VolunteerFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         submitBtn = getView().findViewById(R.id.volunteerBtn);
         spinner = (Spinner) getView().findViewById(R.id.centerSpinner);
-        phoneNumber = getView().findViewById(R.id.phoneNumber);
+        phoneNumber = getView().findViewById(R.id.donation_amount);
         name = getView().findViewById(R.id.name);
 
         String[] arraySpinner = new String[] {

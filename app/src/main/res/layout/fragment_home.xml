@@ -38,7 +38,7 @@
 
                 android:layout_height="89dp"
 
-                android:contentDescription="@string/app_name"
+                android:contentDescription="Volunteer"
 
                 android:padding="5sp"
 
@@ -87,19 +87,18 @@
 
                 android:id="@+id/donateImg"
 
-                android:background="@drawable/cirlce_gold"
-
                 android:layout_width="91dp"
 
                 android:layout_height="89dp"
 
-                android:contentDescription="@string/app_name"
+                android:background="@drawable/ic_help_donate"
+
+                android:contentDescription="Donate"
 
                 android:padding="5sp"
 
                 android:scaleType="fitXY"
 
-                android:src="@drawable/ic_baseline_attach_money_24"
 
 
 
@@ -156,7 +155,7 @@
 
                     android:layout_height="89dp"
 
-                    android:contentDescription="@string/app_name"
+                    android:contentDescription="Report"
 
                     android:padding="5sp"
 
@@ -209,7 +208,7 @@
 
                     android:layout_height="89dp"
 
-                    android:contentDescription="@string/app_name"
+                    android:contentDescription="Adopt"
 
                     android:padding="5sp"
 
