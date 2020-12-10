@@ -214,7 +214,7 @@
 
                     android:scaleType="fitXY"
 
-                    android:src="@drawable/dog_adoption"
+                    android:src="@drawable/adopt"
 
                     android:visibility="visible" />
 
