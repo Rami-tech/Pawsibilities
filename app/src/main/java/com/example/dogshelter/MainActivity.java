@@ -19,7 +19,7 @@ import androidx.navigation.ui.NavigationUI;
 
 public class MainActivity extends AppCompatActivity {
 
-    MediaPlayer mediaPlayer;
+//    MediaPlayer mediaPlayer;
 
     private HomeFragment homeFragment;
     private MediaPlayer mediaPlayer;
