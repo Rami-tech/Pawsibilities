@@ -17,5 +17,6 @@ public class DonateActivity extends AppCompatActivity {
                     .replace(R.id.container, DonateFragment.newInstance())
                     .commitNow();
         }
+        getSupportActionBar().setTitle("Help us and donate");
     }
 }
