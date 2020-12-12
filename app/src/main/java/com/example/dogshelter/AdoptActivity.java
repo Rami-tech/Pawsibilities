@@ -17,5 +17,6 @@ public class AdoptActivity extends AppCompatActivity {
                     .replace(R.id.container, AdoptFragment.newInstance())
                     .commitNow();
         }
+//        getSupportActionBar().setTitle("Adopt");
     }
 }

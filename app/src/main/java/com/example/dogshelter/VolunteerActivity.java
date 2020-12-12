@@ -17,6 +17,6 @@ public class VolunteerActivity extends AppCompatActivity {
                     .replace(R.id.container, VolunteerFragment.newInstance())
                     .commitNow();
         }
-        getSupportActionBar().setTitle("Volunteer");
+//        getSupportActionBar().setTitle("Volunteer");
     }
 }
