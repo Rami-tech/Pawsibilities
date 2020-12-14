@@ -44,6 +44,14 @@ public class AdoptActivity extends AppCompatActivity {
                     i++;
                 }
 
+                DatabaseReference breed = database.getReference("Dogs/Dog4/Breed");
+                breed.setValue("pug");
+                DatabaseReference age = database.getReference("Dogs/Dog4/Age");
+                age.setValue("9");
+                DatabaseReference name = database.getReference("Dogs/Dog4/name");
+                name.setValue("geo");
+
+
 
             }
             @Override
