@@ -25,13 +25,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DogShelter">
 
-        
-        
-        
-        
-        
-
-
         <activity android:name=".AdoptActivity"
             android:screenOrientation="portrait"></activity>
         <activity android:name=".ReportActivity"
