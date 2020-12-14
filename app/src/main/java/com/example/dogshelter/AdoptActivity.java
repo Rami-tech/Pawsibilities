@@ -30,7 +30,6 @@ public class AdoptActivity extends AppCompatActivity {
         }
 
         DatabaseReference myRef = database.getReference("Dogs");
-
         myRef.addValueEventListener(new ValueEventListener() {
 
             private final String TAG = MainActivity.class.getSimpleName();
@@ -39,6 +38,12 @@ public class AdoptActivity extends AppCompatActivity {
                 // This method is called once with the initial value and again
                 // whenever data at this location is updated.
                 Map<String, Object> map = (Map<String, Object>) dataSnapshot.getValue();
+                int i=1;
+                while(i<=map.size()){
+                    System.out.println(map.get("Dog" + String.valueOf(i)));
+                    i++;
+                }
+
 
             }
             @Override
