@@ -23,8 +23,8 @@
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
     <fragment
-        android:id="@+id/navigation_profile"
-        android:name="com.example.dogshelter.ui.notifications.NotificationsFragment"
+        android:id="@+id/navigation_about"
+        android:name="com.example.dogshelter.ui.AboutFragment.AboutFragment"
         android:label="@string/title_profile"
-        tools:layout="@layout/fragment_profile" />
+        tools:layout="@layout/about_fragment" />
 </navigation>
