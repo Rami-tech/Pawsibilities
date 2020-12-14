@@ -1,0 +1,285 @@
+[33mcommit cef712ae6dc00dabe7892a24202b2794411ea78e[m[33m ([m[1;36mHEAD[m[33m, [m[1;31morigin/master[m[33m, [m[1;32mmaster[m[33m)[m
+Author: Rami-tech <53605327+Rami-tech@users.noreply.github.com>
+Date:   Sun Dec 13 17:53:25 2020 +0200
+
+    Added line return in AlertDialog of ReportPage.
+
+[33mcommit 8e3d77a2f80a6e219f4eb2946777a4efe4c51b57[m[33m ([m[1;31morigin/AboutBranch[m[33m, [m[1;32mAboutBranch[m[33m)[m
+Merge: 1e34c46 0d44b4c
+Author: Rami Naffah <53605327+Rami-tech@users.noreply.github.com>
+Date:   Sun Dec 13 17:46:51 2020 +0200
+
+    Merge pull request #11 from Rami-tech/ReportBranch
+    
+    Report branch
+
+[33mcommit 0d44b4c2ba9bdc4e189ce16519320445ccbdb4d1[m[33m ([m[1;31morigin/ReportBranch[m[33m, [m[1;32mReportBranch[m[33m)[m
+Author: Rami-tech <53605327+Rami-tech@users.noreply.github.com>
+Date:   Sun Dec 13 17:41:38 2020 +0200
+
+    Report Page Done.
+
+[33mcommit 1e34c46060518804f1a55cb864b1292f068dc05b[m
+Merge: 00a6cb3 11a415d
+Author: Georgio Yammine <61707078+georgioyammine@users.noreply.github.com>
+Date:   Sun Dec 13 00:46:20 2020 +0200
+
+    Merge pull request #10 from Rami-tech/Adopt-Page
+    
+    Added Adopt page + removed action bar
+
+[33mcommit 11a415db989f79a4825c71a6ac6bc44fb995c1be[m
+Author: Georgio Yammine <61707078+georgioyammine@users.noreply.github.com>
+Date:   Sun Dec 13 00:44:00 2020 +0200
+
+    Added Adopt page + removed action bar
+
+[33mcommit c78af71fbf0f3137b7e5bfd753c708fa44f2d8e1[m[33m ([m[1;31morigin/Rami[m[33m, [m[1;32mRami[m[33m)[m
+Merge: 33f8aff 00a6cb3
+Author: Rami Naffah <53605327+Rami-tech@users.noreply.github.com>
+Date:   Sat Dec 12 19:33:25 2020 +0200
+
+    Merge pull request #9 from Rami-tech/master
+    
+    Update branch 'Rami'
+
+[33mcommit 00a6cb30bdf8264f2a46609e2bd34be7c0461347[m
+Author: Georgio Yammine <61707078+georgioyammine@users.noreply.github.com>
+Date:   Thu Dec 10 21:11:21 2020 +0200
+
+    Update VolunteerFragment.java
+
+[33mcommit a2ea0e7ef54ab4d1dc1eeaea525fdf7f5dc28626[m
+Author: Georgio Yammine <61707078+georgioyammine@users.noreply.github.com>
+Date:   Thu Dec 10 20:48:13 2020 +0200
+
+    Made Home Page scrollable
+
+[33mcommit a81ffd3b336bae5b8a2abe6cb6f5298b38d27d7d[m
+Merge: d46ad6d cfaa3a3
+Author: Georgio Yammine <61707078+georgioyammine@users.noreply.github.com>
+Date:   Thu Dec 10 20:37:27 2020 +0200
+
+    Merge pull request #8 from Rami-tech/Donate-Page
+    
+    Donate page
+
+[33mcommit cfaa3a3cf8e2296c9f3a4da043d28fd9976c2be7[m[33m ([m[1;31morigin/Donate-Page[m[33m)[m
+Author: Georgio Yammine <61707078+georgioyammine@users.noreply.github.com>
+Date:   Thu Dec 10 18:04:35 2020 +0200
+
+    Updated images in Home for dark mode support
+
+[33mcommit ce3bc7e1ebb26c0ed9251b646355b6a5952b0b73[m
+Author: Georgio Yammine <61707078+georgioyammine@users.noreply.github.com>
+Date:   Thu Dec 10 17:03:45 2020 +0200
+
+    Added Donate Page
+
+[33mcommit d46ad6df8c4311cdf3cfc0ca248eaf3d33e03047[m
+Merge: 525a027 01b9b46
+Author: Georgio Yammine <61707078+georgioyammine@users.noreply.github.com>
+Date:   Thu Dec 10 15:42:45 2020 +0200
+
+    Merge pull request #7 from Rami-tech/Volunteer-Page
+    
+    Created Volunteer Page
+
+[33mcommit 01b9b46ad3d9a55974a25a2a31d275ab3b3f5592[m[33m ([m[1;31morigin/Volunteer-Page[m[33m)[m
+Author: Georgio Yammine <61707078+georgioyammine@users.noreply.github.com>
+Date:   Thu Dec 10 15:40:52 2020 +0200
+
+    Created Volunteer Page
+
+[33mcommit 525a027ad6f5fa98edbc74cbaaa00e764bdfdfb8[m
+Merge: b493a28 2d6deb0
+Author: Georgio Yammine <61707078+georgioyammine@users.noreply.github.com>
+Date:   Thu Dec 10 10:08:24 2020 +0200
+
+    Merge pull request #6 from Rami-tech/gy
+    
+    Adated Home fragment for buttons interaction + Added Volunteer, Donate, Report, Adopt activities
+
+[33mcommit 2d6deb03e827618b2348093d19295e3a9e4ec230[m[33m ([m[1;31morigin/gy[m[33m)[m
+Author: Georgio Yammine <61707078+georgioyammine@users.noreply.github.com>
+Date:   Wed Dec 9 19:25:42 2020 +0200
+
+    Added Volunteer, Donate, Report, Adopt activities
+
+[33mcommit b7a4fecfb38c8335e097ae12114b9f6bed32a611[m
+Author: Georgio Yammine <61707078+georgioyammine@users.noreply.github.com>
+Date:   Wed Dec 9 18:15:54 2020 +0200
+
+    Updated Home fragment for buttons interaction
+
+[33mcommit b493a283f026cb753e04effe703bb5b5eb152fd0[m
+Merge: 33f8aff 82bcaf0
+Author: Rami Naffah <53605327+Rami-tech@users.noreply.github.com>
+Date:   Sun Dec 6 10:44:28 2020 +0200
+
+    Merge pull request #5 from Rami-tech/georgio
+    
+    Merge pull request #4 from Rami-tech/master
+
+[33mcommit 82bcaf0981f2b511954f34207af0407631279720[m[33m ([m[1;31morigin/georgio[m[33m)[m
+Merge: 58b4ec9 33f8aff
+Author: Rami Naffah <53605327+Rami-tech@users.noreply.github.com>
+Date:   Sun Dec 6 10:33:15 2020 +0200
+
+    Merge pull request #4 from Rami-tech/master
+    
+    merge 'master' branch into 'Georgio'
+
+[33mcommit 33f8aff47a98c4477da3f94e7081278cbe2519ec[m
+Author: Rami-tech <53605327+Rami-tech@users.noreply.github.com>
+Date:   Sun Dec 6 10:20:53 2020 +0200
+
+    Commit and push branch 'Rami' into 'main'
+
+[33mcommit 6e2af2d35313440bf028a5d81a3d17ef1b1bcb7d[m
+Merge: c02e572 58b4ec9
+Author: Rami Naffah <53605327+Rami-tech@users.noreply.github.com>
+Date:   Sun Dec 6 10:17:34 2020 +0200
+
+    Merge pull request #3 from Rami-tech/georgio
+    
+    Georgio
+
+[33mcommit 58b4ec90f1d190f8e3d0b9fdc86674e68de467fc[m
+Author: geo <ge.or.gi.o@hotmail.com>
+Date:   Sat Dec 5 12:34:29 2020 +0200
+
+    markers added + camera animation (still needs tweaking) + fixed only one icon when running the app
+
+[33mcommit f88d79c20a9b86895abe156afa7bbdfff04ec6b9[m
+Author: geo <ge.or.gi.o@hotmail.com>
+Date:   Sat Dec 5 12:14:35 2020 +0200
+
+    map shows in notifications dashboard, still need to add marker and moveCamera
+
+[33mcommit 01feee59a7328f519f6ebe5efb426167d20f06d6[m
+Author: geo <ge.or.gi.o@hotmail.com>
+Date:   Sat Dec 5 11:16:06 2020 +0200
+
+    added dependency for google map + map api key in map_api.xml + fixed AndroidManifest.xml + fixed media player conflict
+
+[33mcommit d156d5d36501f984829eead434aa3d318d952595[m
+Merge: 4e0f0d8 c02e572
+Author: GeorgioAbiAntoun <62041249+GeorgioAbiAntoun@users.noreply.github.com>
+Date:   Sat Dec 5 02:38:52 2020 +0200
+
+    Merge pull request #2 from Rami-tech/Rami
+    
+    Rami
+
+[33mcommit c02e5725a5b5e7ca79afaf7bd94d6f5e0e5eb4d2[m
+Merge: bb55b08 4e0f0d8
+Author: GeorgioAbiAntoun <62041249+GeorgioAbiAntoun@users.noreply.github.com>
+Date:   Sat Dec 5 02:38:43 2020 +0200
+
+    Merge branch 'georgio' into Rami
+
+[33mcommit bb55b08fa98f67f221edf02765aa1a3f8dd86d6c[m
+Author: Rami-tech <53605327+Rami-tech@users.noreply.github.com>
+Date:   Sat Dec 5 02:36:55 2020 +0200
+
+    Added click sound + fixed event listeners for fragments + updated icons.
+
+[33mcommit 4e0f0d8407c73e2887305898eb5819ccd79a4efb[m
+Author: geo <ge.or.gi.o@hotmail.com>
+Date:   Sat Dec 5 02:33:50 2020 +0200
+
+    added cute dog pics + added stories to DashboardFragment + added event listener to stories + added story activity + design
+
+[33mcommit fe401b8233591d0a3ea463513f16784ad1cf5b46[m
+Author: Rami-tech <53605327+Rami-tech@users.noreply.github.com>
+Date:   Sat Dec 5 02:31:30 2020 +0200
+
+    Added click sound + fixed event listeners for fragments + updated icons.
+
+[33mcommit 236326bdb14dcae478002671efee50bf0b90551f[m
+Author: Rami-tech <53605327+Rami-tech@users.noreply.github.com>
+Date:   Fri Dec 4 23:51:44 2020 +0200
+
+    Home Page Design Done
+
+[33mcommit 26436cf4ac5fc2e3845d0fb639ae5fe37e139902[m
+Author: geo <ge.or.gi.o@hotmail.com>
+Date:   Fri Dec 4 22:07:44 2020 +0200
+
+    fixed naming
+
+[33mcommit e84bc2dd33916fe7748787b54e45ed4fc993a699[m
+Author: geo <ge.or.gi.o@hotmail.com>
+Date:   Fri Dec 4 22:00:15 2020 +0200
+
+    added images + edited dashboard
+
+[33mcommit 7b0703effd43b945f5e951b5390cb955849702f3[m
+Author: geo <ge.or.gi.o@hotmail.com>
+Date:   Fri Dec 4 21:41:56 2020 +0200
+
+    dashboard stories
+
+[33mcommit dfd63512d4471a1c52eca13b02612e2de15d7b68[m
+Merge: 2308c9e 79c1f2e
+Author: GeorgioAbiAntoun <62041249+GeorgioAbiAntoun@users.noreply.github.com>
+Date:   Fri Dec 4 16:53:14 2020 +0200
+
+    Merge pull request #1 from Rami-tech/Rami
+    
+    Rami
+
+[33mcommit 79c1f2e0e8cb4a018f4e4ea527e6962fd4a37ee6[m
+Author: Rami-tech <53605327+Rami-tech@users.noreply.github.com>
+Date:   Fri Dec 4 16:46:34 2020 +0200
+
+    Rami Branch
+
+[33mcommit 07fc2337f8196b0e9c2e565404c9a9bf9880ed30[m
+Author: Rami-tech <53605327+Rami-tech@users.noreply.github.com>
+Date:   Fri Dec 4 16:43:39 2020 +0200
+
+    Rami Branch
+
+[33mcommit 2308c9e371d634fa93e3db05d51c5fb27e6d2a02[m
+Author: geo <ge.or.gi.o@hotmail.com>
+Date:   Fri Dec 4 16:19:11 2020 +0200
+
+    added icon + sound effect when opening app
+
+[33mcommit cc4c3e1e3d03af5fdba5ad6808e194c77a27cfca[m
+Author: geo <ge.or.gi.o@hotmail.com>
+Date:   Fri Dec 4 13:55:42 2020 +0200
+
+    local
+
+[33mcommit c88ede99c1d9f6c150a3aa166ea64f0e0a38a89b[m
+Author: geo <ge.or.gi.o@hotmail.com>
+Date:   Fri Dec 4 13:53:54 2020 +0200
+
+    local
+
+[33mcommit 7fcf70e1a0c6beff980d8191fdbafd91f688b47c[m
+Author: geo <ge.or.gi.o@hotmail.com>
+Date:   Fri Dec 4 13:15:44 2020 +0200
+
+    local
+
+[33mcommit 28c9acbf9193f22e50d14c2dc7284536b1310833[m
+Author: geo <ge.or.gi.o@hotmail.com>
+Date:   Fri Dec 4 13:08:28 2020 +0200
+
+    local
+
+[33mcommit 3defc8b27b5e4693ec9d64d60b48a29110f3c1e3[m
+Author: geo <ge.or.gi.o@hotmail.com>
+Date:   Fri Dec 4 13:06:59 2020 +0200
+
+    local
+
+[33mcommit 50981e4048b7a3ce5e09fcdef6edee5417688bfe[m
+Author: Rami-tech <53605327+Rami-tech@users.noreply.github.com>
+Date:   Fri Dec 4 00:33:48 2020 +0200
+
+    Initial commit
