@@ -104,7 +104,7 @@ public class ReportFragment extends Fragment {
 
             builder.setMessage("Phone Number: " + phoneEdit.getText() + "\n\n" +
                     "Health Condition: " + healthCondSpinner.getSelectedItem().toString() + "\n\n" +
-                    "Location: " + locationEdit.getText() +
+                    "Location: " + locationEdit.getText() +"\n\n"+
                     "Thank you for helping!");
 
             builder.setPositiveButton("Report", new DialogInterface.OnClickListener() {
