@@ -17,11 +17,13 @@ import android.widget.Button;
 import com.example.dogshelter.R;
 import com.example.dogshelter.placeHolderActivity;
 import com.example.dogshelter.storyActivity;
+import com.example.dogshelter.ui.notifications.NotificationsFragment;
 
 public class AboutFragment extends Fragment {
 
     private AboutViewModel mViewModel;
     private Button webViewBtn;
+    private Button HDLocationID;
 
     public static AboutFragment newInstance() {
         return new AboutFragment();
@@ -43,8 +45,13 @@ public class AboutFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState){
         super.onViewCreated(view, savedInstanceState);
         webViewBtn = getView().findViewById(R.id.webViewBtn);
+        HDLocationID = getView().findViewById(R.id.HDLocationId);
         webViewBtn.setOnClickListener(v->{
             Intent intent = new Intent(getActivity(), placeHolderActivity.class);
+            startActivity(intent);
+        });
+        HDLocationID.setOnClickListener(v->{
+            Intent intent = new Intent(getActivity(), NotificationsFragment.class);
             startActivity(intent);
         });
     }
