@@ -36,7 +36,7 @@ import static java.lang.Thread.sleep;
 public class HomeFragment extends Fragment {
 
     private HomeViewModel homeViewModel;
-    private CardView volunteerID, donateID, adoptID,reportID;
+    private CardView volunteerID, donateID, adoptID, reportID;
     private ImageView dogImg;
     private ImageView adoptImg, volunteerImg, donateImg;
     Animation animRotate;
@@ -56,6 +56,7 @@ public class HomeFragment extends Fragment {
         });
         return root;
     }
+
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
@@ -83,71 +84,7 @@ public class HomeFragment extends Fragment {
         for (CardView e : Arrays.asList(volunteerID, donateID, adoptID, reportID)) {
             e.setOnClickListener(v -> {
                         mediaPlayer.start();
-
-                            if(v == reportID) {
-                                dogImg.startAnimation(animRotate);
-                                animRotate.setAnimationListener(new Animation.AnimationListener() {
-                                    @Override
-                                    public void onAnimationStart(Animation animation) {
-
-                                    }
-
-                                    @Override
-                                    public void onAnimationEnd(Animation animation) {
-                                        openPage(e);
-                                    }
-
-                                    @Override
-                                    public void onAnimationRepeat(Animation animation) {
-
-                                    }
-                                });
-
-
-                            }
-                            if(v == volunteerID) {
-                                volunteerImg.startAnimation(animRotate);
-                                animRotate.setAnimationListener(new Animation.AnimationListener() {
-                                    @Override
-                                    public void onAnimationStart(Animation animation) {
-
-                                    }
-
-                                    @Override
-                                    public void onAnimationEnd(Animation animation) {
-                                        openPage(e);
-
-                                    }
-
-                                    @Override
-                                    public void onAnimationRepeat(Animation animation) {
-
-                                    }
-                                });
-
-                }
-                if(v == adoptID) {
-                    adoptImg.startAnimation(animRotate);
-                    animRotate.setAnimationListener(new Animation.AnimationListener() {
-                        @Override
-                        public void onAnimationStart(Animation animation) {
-
-                        }
-
-                        @Override
-                        public void onAnimationEnd(Animation animation) {
-                            openPage(e);
-
-                        }
-
-                        @Override
-                        public void onAnimationRepeat(Animation animation) {
-
-                        }
-                    });
-
-                }
-                if(v == donateImg){
+                if (v == donateID) {
                     donateImg.startAnimation(animRotate);
                     animRotate.setAnimationListener(new Animation.AnimationListener() {
                         @Override
@@ -158,7 +95,6 @@ public class HomeFragment extends Fragment {
                         @Override
                         public void onAnimationEnd(Animation animation) {
                             openPage(e);
-
                         }
 
                         @Override
@@ -169,28 +105,92 @@ public class HomeFragment extends Fragment {
 
                 }
 
+                        if (v == reportID) {
+                            dogImg.startAnimation(animRotate);
+                            animRotate.setAnimationListener(new Animation.AnimationListener() {
+                                @Override
+                                public void onAnimationStart(Animation animation) {
+
+                                }
+
+                                @Override
+                                public void onAnimationEnd(Animation animation) {
+                                    openPage(e);
+                                }
+
+                                @Override
+                                public void onAnimationRepeat(Animation animation) {
+
+                                }
+                            });
+
+
+                        }
+                        if (v == volunteerID) {
+                            volunteerImg.startAnimation(animRotate);
+                            animRotate.setAnimationListener(new Animation.AnimationListener() {
+                                @Override
+                                public void onAnimationStart(Animation animation) {
+
+                                }
+
+                                @Override
+                                public void onAnimationEnd(Animation animation) {
+                                    openPage(e);
+
+                                }
+
+                                @Override
+                                public void onAnimationRepeat(Animation animation) {
+
+                                }
+                            });
+
+                        }
+                        if (v == adoptID) {
+                            adoptImg.startAnimation(animRotate);
+                            animRotate.setAnimationListener(new Animation.AnimationListener() {
+                                @Override
+                                public void onAnimationStart(Animation animation) {
+
+                                }
+
+                                @Override
+                                public void onAnimationEnd(Animation animation) {
+                                    openPage(e);
+
+                                }
+
+                                @Override
+                                public void onAnimationRepeat(Animation animation) {
+
+                                }
+                            });
+
+                        }
+
                     }
             );
         }
     }
 
-    private void openPage(CardView e)  {
+    private void openPage(CardView e) {
         Class className = null;
 
-        if(e==volunteerID)
+        if (e == volunteerID)
             className = VolunteerActivity.class;
-        else{
-            if(e==donateID)
+        else {
+            if (e == donateID)
                 className = DonateActivity.class;
-            else{
-                if(e==adoptID)
+            else {
+                if (e == adoptID)
                     className = AdoptActivity.class;
                 else {
                     className = ReportActivity.class;
                 }
             }
         }
-        if(className!=null) {
+        if (className != null) {
             Intent intent = new Intent(getActivity(), className);
             startActivity(intent);
         }
