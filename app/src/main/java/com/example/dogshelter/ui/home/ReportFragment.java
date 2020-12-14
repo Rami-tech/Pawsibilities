@@ -45,6 +45,8 @@ public class ReportFragment extends Fragment {
     private TextInputEditText phoneEdit;
     private TextInputEditText locationEdit;
     private AlertDialog show;
+    private Button cameraBtn;
+    private static final int pic_id = 123;
 
 
     public static ReportFragment newInstance() {
@@ -67,6 +69,7 @@ public class ReportFragment extends Fragment {
         dogImg = getView().findViewById(R.id.dogImg);
         phoneEdit = getView().findViewById(R.id.phoneEdit);
         locationEdit = getView().findViewById(R.id.locationEdit);
+//        cameraBtn = getView().findViewById(R.id.cameraBtn);
 
         String[] arraySpinner = new String[]{
                 "Critical", "Bad", "Good", "Excellent"
@@ -93,11 +96,29 @@ public class ReportFragment extends Fragment {
                     requestPermissions(
                             new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},
                             2000);
+
                 } else {
                     startGallery();
                 }
             }
         });
+//        cameraBtn.setOnClickListener(new View.OnClickListener() {
+//
+//            @Override
+//            public void onClick(View v)
+//            {
+//
+//                // Create the camera_intent ACTION_IMAGE_CAPTURE
+//                // it will open the camera for capture the image
+//                Intent camera_intent
+//                        = new Intent(MediaStore
+//                        .ACTION_IMAGE_CAPTURE);
+//
+//                // Start the activity with camera_intent,
+//                // and request pic id
+//                startActivityForResult(camera_intent, pic_id);
+//            }
+//        });
         reportBtn.setOnClickListener(e -> {
             AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
             builder.setTitle("Info Verification");
@@ -153,6 +174,16 @@ public class ReportFragment extends Fragment {
                 }
                 dogImg.setImageBitmap(bitmapImage);
             }
+//            if (requestCode == pic_id) {
+//
+//                // BitMap is data structure of image file
+//                // which stor the image in memory
+//                Bitmap photo = (Bitmap)data.getExtras()
+//                        .get("data");
+//
+//                // Set the image in imageview for display
+//                dogImg.setImageBitmap(photo);
+//            }
 
 
         }
