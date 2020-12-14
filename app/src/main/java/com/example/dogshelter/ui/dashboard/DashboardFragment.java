@@ -1,6 +1,8 @@
 package com.example.dogshelter.ui.dashboard;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -38,6 +40,8 @@ public class DashboardFragment extends Fragment {
             Intent intent = new Intent(getActivity(), storyActivity.class);
             startActivity(intent);
         });
+        SharedPreferences dogImg = this.getActivity().getSharedPreferences("dogPref", Context.MODE_PRIVATE);
+//        SharedPreferences.Editor editor = dogImg
 
     }
 }
