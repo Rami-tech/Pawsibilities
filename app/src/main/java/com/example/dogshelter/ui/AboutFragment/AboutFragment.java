@@ -18,6 +18,8 @@ import com.example.dogshelter.R;
 import com.example.dogshelter.placeHolderActivity;
 import com.example.dogshelter.storyActivity;
 import com.example.dogshelter.ui.notifications.NotificationsFragment;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationView;
 
 public class AboutFragment extends Fragment {
 
@@ -51,8 +53,11 @@ public class AboutFragment extends Fragment {
             startActivity(intent);
         });
         HDLocationID.setOnClickListener(v->{
-            Intent intent = new Intent(getActivity(), NotificationsFragment.class);
-            startActivity(intent);
+//            BottomNavigationView navigationView = (BottomNavigationView) getActivity().findViewById(R.id.nav_view);
+//            navigationView.getMenu().getItem(2).setChecked(true);
+
+            getActivity().findViewById(R.id.navigation_notifications).performClick();
+
         });
     }
 
