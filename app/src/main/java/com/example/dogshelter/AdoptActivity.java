@@ -11,13 +11,13 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-
-import java.util.HashMap;
+import com.google.firebase.storage.FirebaseStorage;
 import java.util.Map;
 
 public class AdoptActivity extends AppCompatActivity {
 
     FirebaseDatabase database = FirebaseDatabase.getInstance("https://pawsibilities-default-rtdb.firebaseio.com/");
+    FirebaseStorage storage = FirebaseStorage.getInstance("gs://my-custom-bucket");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +50,8 @@ public class AdoptActivity extends AppCompatActivity {
                 age.setValue("9");
                 DatabaseReference name = database.getReference("Dogs/Dog4/name");
                 name.setValue("geo");
+
+
 
 
 
