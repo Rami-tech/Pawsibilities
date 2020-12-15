@@ -25,7 +25,7 @@ public class placeHolderActivity extends AppCompatActivity {
         setContentView(R.layout.place_holder);
         webView = findViewById(R.id.webView);
         webView.getSettings().setJavaScriptEnabled(true);
-        webView.loadUrl("https://github.com/GeorgioAbiAntoun/webHolder");
+        webView.loadUrl("https://www.instagram.com/lebanononlinepetadoption/");
         webView.setWebViewClient(new WebViewClient(){
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, String url) {

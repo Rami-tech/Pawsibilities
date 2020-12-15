@@ -89,7 +89,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:backgroundTint="#FFFFFF"
-            android:text="GitHub"
+            android:text="Instagram"
             android:textColor="#7C7676"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
