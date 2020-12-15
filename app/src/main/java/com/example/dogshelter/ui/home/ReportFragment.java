@@ -5,8 +5,10 @@ import androidx.lifecycle.ViewModelProvider;
 
 import android.Manifest;
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.net.Uri;
@@ -27,6 +29,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.dogshelter.R;
 import com.google.android.material.textfield.TextInputEditText;
@@ -47,6 +50,7 @@ public class ReportFragment extends Fragment {
     private AlertDialog show;
     private Button cameraBtn;
     private static final int pic_id = 123;
+    private SharedPreferences sp;
 
 
     public static ReportFragment newInstance() {
@@ -102,6 +106,8 @@ public class ReportFragment extends Fragment {
                 }
             }
         });
+
+
 //        cameraBtn.setOnClickListener(new View.OnClickListener() {
 //
 //            @Override
@@ -131,7 +137,11 @@ public class ReportFragment extends Fragment {
             builder.setPositiveButton("Report", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
-
+                    sp = getActivity().getSharedPreferences("info", Context.MODE_PRIVATE);
+                    SharedPreferences.Editor editor = sp.edit();
+                    editor.putString("info", locationEdit.getText().toString());
+                    editor.commit();
+                    Toast.makeText(getActivity(),"Stray dog in "+sp.getString("info","")+" reported.",Toast.LENGTH_LONG).show();
                 }
             });
             builder.setNegativeButton("Dismiss", new DialogInterface.OnClickListener() {

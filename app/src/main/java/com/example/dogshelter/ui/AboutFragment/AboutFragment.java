@@ -16,10 +16,7 @@ import android.widget.Button;
 
 import com.example.dogshelter.R;
 import com.example.dogshelter.placeHolderActivity;
-import com.example.dogshelter.storyActivity;
-import com.example.dogshelter.ui.notifications.NotificationsFragment;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.navigation.NavigationView;
+
 
 public class AboutFragment extends Fragment {
 

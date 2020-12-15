@@ -45,11 +45,8 @@ public class DashboardFragment extends Fragment {
             Intent intent = new Intent(getActivity(), storyActivity.class);
             startActivity(intent);
         });
-         sp = this.getActivity().getSharedPreferences("info", Context.MODE_PRIVATE);
-         SharedPreferences.Editor editor = sp.edit();
-         editor.putString("info", textView3.getText().toString());
-         editor.commit();
-         System.out.println(sp.getString("info",""));
+
+
 
 
     }
