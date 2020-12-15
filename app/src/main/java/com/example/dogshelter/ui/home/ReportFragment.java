@@ -152,6 +152,20 @@ public class ReportFragment extends Fragment {
                     editor.putString("info", locationEdit.getText().toString());
                     editor.commit();
                     Toast.makeText(getActivity(),"Stray dog in "+sp.getString("info","")+" reported.",Toast.LENGTH_LONG).show();
+
+                    DatabaseReference myRef = database.getReference("Dogs/Reported");
+
+                    myRef.push();
+
+
+                    DatabaseReference dog = database.getReference("Dogs/Reported/Dog"+ valueOf(System.currentTimeMillis()/1000));
+                    DatabaseReference health_condition = dog.child("Health Condition");
+                    health_condition.setValue(healthCondSpinner.getSelectedItem().toString());
+                    DatabaseReference phoneNumber = dog.child("Phone Number");
+                    phoneNumber.setValue(phoneEdit.getText().toString());
+                    DatabaseReference location = dog.child("Location");
+                    location.setValue(locationEdit.getText().toString());
+
                 }
             });
             builder.setNegativeButton("Dismiss", new DialogInterface.OnClickListener() {
@@ -163,18 +177,7 @@ public class ReportFragment extends Fragment {
 
             show = builder.show();
 
-            DatabaseReference myRef = database.getReference("Dogs/Reported");
 
-            myRef.push();
-
-
-            DatabaseReference dog = database.getReference("Dogs/Reported/Dog"+ valueOf(System.currentTimeMillis()/1000));
-            DatabaseReference health_condition = dog.child("Health Condition");
-            health_condition.setValue(healthCondSpinner.getSelectedItem().toString());
-            DatabaseReference phoneNumber = dog.child("Phone Number");
-            phoneNumber.setValue(phoneEdit.getText().toString());
-            DatabaseReference location = dog.child("Location");
-            location.setValue(locationEdit.getText().toString());
 
 
 
