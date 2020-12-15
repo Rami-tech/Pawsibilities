@@ -5,8 +5,10 @@ import androidx.lifecycle.ViewModelProvider;
 
 import android.Manifest;
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.net.Uri;
@@ -27,6 +29,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.dogshelter.R;
 import com.google.android.material.textfield.TextInputEditText;
@@ -45,6 +48,9 @@ public class ReportFragment extends Fragment {
     private TextInputEditText phoneEdit;
     private TextInputEditText locationEdit;
     private AlertDialog show;
+    private Button cameraBtn;
+    private static final int pic_id = 123;
+    private SharedPreferences sp;
 
 
     public static ReportFragment newInstance() {
@@ -67,6 +73,7 @@ public class ReportFragment extends Fragment {
         dogImg = getView().findViewById(R.id.dogImg);
         phoneEdit = getView().findViewById(R.id.phoneEdit);
         locationEdit = getView().findViewById(R.id.locationEdit);
+//        cameraBtn = getView().findViewById(R.id.cameraBtn);
 
         String[] arraySpinner = new String[]{
                 "Critical", "Bad", "Good", "Excellent"
@@ -93,11 +100,31 @@ public class ReportFragment extends Fragment {
                     requestPermissions(
                             new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},
                             2000);
+
                 } else {
                     startGallery();
                 }
             }
         });
+
+
+//        cameraBtn.setOnClickListener(new View.OnClickListener() {
+//
+//            @Override
+//            public void onClick(View v)
+//            {
+//
+//                // Create the camera_intent ACTION_IMAGE_CAPTURE
+//                // it will open the camera for capture the image
+//                Intent camera_intent
+//                        = new Intent(MediaStore
+//                        .ACTION_IMAGE_CAPTURE);
+//
+//                // Start the activity with camera_intent,
+//                // and request pic id
+//                startActivityForResult(camera_intent, pic_id);
+//            }
+//        });
         reportBtn.setOnClickListener(e -> {
             AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
             builder.setTitle("Info Verification");
@@ -110,7 +137,11 @@ public class ReportFragment extends Fragment {
             builder.setPositiveButton("Report", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
-
+                    sp = getActivity().getSharedPreferences("info", Context.MODE_PRIVATE);
+                    SharedPreferences.Editor editor = sp.edit();
+                    editor.putString("info", locationEdit.getText().toString());
+                    editor.commit();
+                    Toast.makeText(getActivity(),"Stray dog in "+sp.getString("info","")+" reported.",Toast.LENGTH_LONG).show();
                 }
             });
             builder.setNegativeButton("Dismiss", new DialogInterface.OnClickListener() {
@@ -153,6 +184,16 @@ public class ReportFragment extends Fragment {
                 }
                 dogImg.setImageBitmap(bitmapImage);
             }
+//            if (requestCode == pic_id) {
+//
+//                // BitMap is data structure of image file
+//                // which stor the image in memory
+//                Bitmap photo = (Bitmap)data.getExtras()
+//                        .get("data");
+//
+//                // Set the image in imageview for display
+//                dogImg.setImageBitmap(photo);
+//            }
 
 
         }

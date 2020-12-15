@@ -7,6 +7,10 @@ import android.provider.MediaStore;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -24,12 +28,18 @@ import com.example.dogshelter.ReportActivity;
 import com.example.dogshelter.VolunteerActivity;
 import com.example.dogshelter.storyActivity;
 
+import java.security.Provider;
 import java.util.Arrays;
+
+import static java.lang.Thread.sleep;
 
 public class HomeFragment extends Fragment {
 
     private HomeViewModel homeViewModel;
-    private CardView volunteerID, donateID, adoptID,reportID;
+    private CardView volunteerID, donateID, adoptID, reportID;
+    private ImageView dogImg;
+    private ImageView adoptImg, volunteerImg, donateImg;
+    Animation animRotate;
 
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -46,13 +56,22 @@ public class HomeFragment extends Fragment {
         });
         return root;
     }
+
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
         volunteerID = getView().findViewById(R.id.volunteerID);
         donateID = getView().findViewById(R.id.donateID);
         adoptID = getView().findViewById(R.id.adoptCardId);
         reportID = getView().findViewById(R.id.reportId);
+        dogImg = getView().findViewById(R.id.dogImg);
+        adoptImg = getView().findViewById(R.id.adoptImg);
+        donateImg = getView().findViewById(R.id.donateImg);
+        volunteerImg = getView().findViewById(R.id.volunteerImg);
+
+        animRotate = AnimationUtils.loadAnimation(getActivity().getApplicationContext(),
+                R.anim.rotate);
 
 //        api 24 android 7+ to support lambdas and streams
 //        Arrays.asList(volunteerID,donateID,adoptID,reportID).forEach(e -> e.setOnClickListener(v-> {
@@ -65,7 +84,91 @@ public class HomeFragment extends Fragment {
         for (CardView e : Arrays.asList(volunteerID, donateID, adoptID, reportID)) {
             e.setOnClickListener(v -> {
                         mediaPlayer.start();
-                        openPage(e);
+                if (v == donateID) {
+                    donateImg.startAnimation(animRotate);
+                    animRotate.setAnimationListener(new Animation.AnimationListener() {
+                        @Override
+                        public void onAnimationStart(Animation animation) {
+
+                        }
+
+                        @Override
+                        public void onAnimationEnd(Animation animation) {
+                            openPage(e);
+                        }
+
+                        @Override
+                        public void onAnimationRepeat(Animation animation) {
+
+                        }
+                    });
+
+                }
+
+                        if (v == reportID) {
+                            dogImg.startAnimation(animRotate);
+                            animRotate.setAnimationListener(new Animation.AnimationListener() {
+                                @Override
+                                public void onAnimationStart(Animation animation) {
+
+                                }
+
+                                @Override
+                                public void onAnimationEnd(Animation animation) {
+                                    openPage(e);
+                                }
+
+                                @Override
+                                public void onAnimationRepeat(Animation animation) {
+
+                                }
+                            });
+
+
+                        }
+                        if (v == volunteerID) {
+                            volunteerImg.startAnimation(animRotate);
+                            animRotate.setAnimationListener(new Animation.AnimationListener() {
+                                @Override
+                                public void onAnimationStart(Animation animation) {
+
+                                }
+
+                                @Override
+                                public void onAnimationEnd(Animation animation) {
+                                    openPage(e);
+
+                                }
+
+                                @Override
+                                public void onAnimationRepeat(Animation animation) {
+
+                                }
+                            });
+
+                        }
+                        if (v == adoptID) {
+                            adoptImg.startAnimation(animRotate);
+                            animRotate.setAnimationListener(new Animation.AnimationListener() {
+                                @Override
+                                public void onAnimationStart(Animation animation) {
+
+                                }
+
+                                @Override
+                                public void onAnimationEnd(Animation animation) {
+                                    openPage(e);
+
+                                }
+
+                                @Override
+                                public void onAnimationRepeat(Animation animation) {
+
+                                }
+                            });
+
+                        }
+
                     }
             );
         }
@@ -74,19 +177,20 @@ public class HomeFragment extends Fragment {
     private void openPage(CardView e) {
         Class className = null;
 
-        if(e==volunteerID)
+        if (e == volunteerID)
             className = VolunteerActivity.class;
-        else{
-            if(e==donateID)
+        else {
+            if (e == donateID)
                 className = DonateActivity.class;
-            else{
-                if(e==adoptID)
+            else {
+                if (e == adoptID)
                     className = AdoptActivity.class;
-                else
+                else {
                     className = ReportActivity.class;
+                }
             }
         }
-        if(className!=null) {
+        if (className != null) {
             Intent intent = new Intent(getActivity(), className);
             startActivity(intent);
         }
