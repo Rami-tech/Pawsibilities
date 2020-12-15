@@ -32,11 +32,19 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.dogshelter.R;
+import com.firebase.client.Firebase;
 import com.google.android.material.textfield.TextInputEditText;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ServerValue;
 
 import java.io.IOException;
+import java.sql.Timestamp;
+import java.util.HashMap;
+import java.util.Map;
 
 import static android.app.Activity.RESULT_OK;
+import static java.lang.String.valueOf;
 
 public class ReportFragment extends Fragment {
 
@@ -51,6 +59,8 @@ public class ReportFragment extends Fragment {
     private Button cameraBtn;
     private static final int pic_id = 123;
     private SharedPreferences sp;
+
+    FirebaseDatabase database = FirebaseDatabase.getInstance("https://pawsibilities-default-rtdb.firebaseio.com/");
 
 
     public static ReportFragment newInstance() {
@@ -152,6 +162,25 @@ public class ReportFragment extends Fragment {
             });
 
             show = builder.show();
+
+            DatabaseReference myRef = database.getReference("Dogs/Reported");
+
+            myRef.push();
+
+
+            DatabaseReference dog = database.getReference("Dogs/Reported/Dog"+ valueOf(System.currentTimeMillis()/1000));
+            DatabaseReference health_condition = dog.child("Health Condition");
+            health_condition.setValue(healthCondSpinner.getSelectedItem().toString());
+            DatabaseReference phoneNumber = dog.child("Phone Number");
+            phoneNumber.setValue(phoneEdit.getText().toString());
+            DatabaseReference location = dog.child("Location");
+            location.setValue(locationEdit.getText().toString());
+
+
+
+
+
+
         });
     }
 

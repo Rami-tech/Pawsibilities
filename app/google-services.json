@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "480578464864",
+    "project_id": "pawsibilities",
+    "storage_bucket": "pawsibilities.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:480578464864:android:a0b43a9d0ddd4c31786705",
+        "android_client_info": {
+          "package_name": "com.example.dogshelter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "480578464864-0aroun3oar25jrajft88eja1fchj4vg5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC17pCX_EME103XPH8jYPhAb-z35MMqrL4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "480578464864-0aroun3oar25jrajft88eja1fchj4vg5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
